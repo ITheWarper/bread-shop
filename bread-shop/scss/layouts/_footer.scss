@@ -1,0 +1,88 @@
+.footer {
+    
+    background-image: url(../img/footer-background.png);
+    background-color: var(--primary-dark);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 32px 0;
+    position: relative;
+    
+
+    &__container {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            
+                @media screen and (min-width: $bp-tablet) {
+                    flex-direction: row;
+                    flex-basis: 50%;
+                }
+        }
+    &__nav {
+        flex-basis: 50%;
+        display: flex;
+        gap: 20px;
+    }
+    &__adress {
+        text-align: center;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+            flex-basis: 50%;
+            text-align: left;
+        }
+    }
+    &__logo {
+        flex-grow: 1;
+    }
+    &__menu {
+        flex-grow: 1;
+    }
+    &::before {
+        position: absolute;
+        background-image: url(../img/left-bread.png);
+        content: '';
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 120px;
+        bottom: 0;
+    
+    }
+    &::after {
+        position: absolute;
+        background-image: url(../img/right-bread.png);
+        content: '';
+        background-repeat: no-repeat;
+        width: 380px;
+        height: 190px;
+        bottom: 0;
+        right: 0;
+    }
+    &__adress-list {
+        flex-grow: 1;
+    
+    }
+    &__adress-link {
+        font-size: 16px;
+        color: var(--primary-white);
+        font-weight: 300;
+        text-decoration: none;
+        flex-grow: 1;
+        &:hover {
+                color: var(--color-brand-normal);
+            }
+    }
+    &__adress-copy-right {
+        font-size: 14px;
+    }
+    &__adress-icon {
+        fill: var(--primary-white);
+        &:hover {
+                fill: var(--color-brand-normal);
+            }
+    }
+}
